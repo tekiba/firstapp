@@ -1,0 +1,195 @@
+/* ############### Defaults ############### */
+nav,
+header,
+footer {
+    display: block;
+    font-family: cursive, sans-serif;
+}
+
+body {
+    line-height: 1;
+    margin: 0;
+    background: #eee;
+}
+
+p {
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    padding-top: 4%;/* the padding adds 
+    a height to the container */
+    padding-bottom: 4%;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: contain;
+    align-items: center;
+}
+
+.row::after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* ################# Nav Bar ################ */
+ 
+  nav {
+     position: fixed;
+     width: 100%;
+     margin: 0;
+     font-family: cursive;
+     /* mix-blend-mode: screen; */
+ }
+  nav ul {
+      background-color: #eee;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+  }
+
+  ul.topnav li {
+      list-style: none;
+      float: left;
+  }
+
+  ul.topnav li.topnav-right {
+      list-style: none;
+      float: right;
+  }
+
+  ul.topnav li a {
+      display: block;
+      text-decoration: none;
+      min-height: 16px;
+      margin: 0;
+      padding: 14px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #666;
+  }
+
+  ul.topnav li a:hover {
+      background-color:#0080ff;
+      color: #fff;
+  }
+
+  ul.topnav li.dropDownIcon {
+    display: none;
+}
+
+
+/* ################ Custom Styles ################## */
+
+div.container div.row div.col-12 h1.firstHeader {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#calculatorform {
+    display: block;
+    margin: 5px auto;
+}
+
+#calculatorform h2, h3, form {
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+    padding: 5px;
+}
+
+#calculatorform form input {
+    display: block;
+    margin: 5px auto;
+    width: 50%;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* ################### Mobile ##################### */
+
+@media screen and (max-width: 680px) {
+
+     ul.topnav li:not(:nth-child(1)) {
+        display: none;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    ul.topnav li.dropDownIcon {
+        display: block;
+        float: right;
+        
+    }
+
+    ul.topnav.responsive li.dropDownIcon {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        /* border: 2px solid darkgray; */
+    }
+
+    ul.topnav.responsive {
+         position: relative;  /* doesnt change anything */
+    }
+
+    ul.topnav.responsive li {
+        display: block; /*is eventually overwritten*/
+        float: none; /*creates the dropdown list*/
+    }
+
+    ul.topnav.responsive li a {
+        display: block;
+        text-align: left;
+    }
+
+    #calculatorform {
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+
+    #calculatorform h2, h3, form {
+        display: block;
+        margin: 5px auto;
+        width: 100%;
+    }
+
+    #calculatorform form input {
+        display: block;
+        width: 100%;
+        margin: 5px auto;
+    }
+}

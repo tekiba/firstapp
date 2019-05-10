@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Percentage Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
+    </head>
+    <body>
+        <nav>
+            <ul class="topnav" id="dropDownClick">
+                <li><a href="#percentagecalculator">Home</a></li>
+                <li><a href="#news">Calculator</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="topnav-right"><a href="#login">Login</a></li>
+                <li class="topnav-right"><a href="#signup">Sign Up</a></li>
+                <li class="dropDownIcon"><a href="javascript:void(0);" onclick="myLib.dropDownMenu();">&#9776;</a></li>
+            </ul>
+        </nav>
+        <div class="container" id="percentagecalculator">
+            <div class="row">
+                <div class="col-12">
+                   <h1 class="firstHeader">Percentage Calculator</h1> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12" id="calculatorform">
+                    <h2>X is what % of Y</h2>
+                    <form id="xIsWhatPercentOfY">
+                        <input type="text" placeholder="X" id="numField1">is what % of 
+                        <input type="text" placeholder="Y" id="numField2"><br><br>
+                        <input type="submit" value="Calculate">
+                    </form>
+                    <h3 id="resultField"></h3>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
